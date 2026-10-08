@@ -1,0 +1,100 @@
+/* ==========================================================
+   Monster AI - Black & Gold theme override
+   How to use:
+   1. Paste this whole file at the END of your <style> block,
+      or save it and link it AFTER your main stylesheet:
+      <link rel="stylesheet" href="monster-ai-black-gold.css">
+   2. Refresh the page (Ctrl+F5).
+   ========================================================== */
+
+:root {
+  --bg: #0a0a0a;
+  --background: #0a0a0a;
+  --surface: #141414;
+  --card: #141414;
+  --sidebar: #0f0f0f;
+  --border: #2e260c;
+  --text: #f5f1e6;
+  --muted: #a89968;
+  --primary: #d4af37;
+  --accent: #d4af37;
+  --accent-hover: #f0cf5a;
+  --accent-soft: rgba(212, 175, 55, 0.12);
+  --gold: #d4af37;
+  --gold-soft: rgba(212, 175, 55, 0.12);
+}
+
+/* ---------- Base ---------- */
+html, body {
+  background: #0a0a0a !important;
+  color: #f5f1e6 !important;
+}
+main { background: #0a0a0a !important; }
+
+/* ---------- Sidebar, top bar ---------- */
+aside, nav, header {
+  background: #0f0f0f !important;
+  border-color: #2e260c !important;
+  color: #f5f1e6 !important;
+}
+
+/* ---------- Cards, panels, tiles (incl. the 3 quick-action cards) ---------- */
+[class*="card"], [class*="panel"], [class*="tile"], [class*="stat"], [class*="widget"] {
+  background: #141414 !important;
+  border: 1px solid #2e260c !important;
+  color: #f5f1e6 !important;
+}
+
+/* ---------- Muted / secondary text ---------- */
+small, [class*="muted"], [class*="subtitle"], [class*="desc"], [class*="label"] {
+  color: #a89968 !important;
+}
+
+/* ---------- Buttons ---------- */
+button, [class*="btn"] {
+  background: #d4af37 !important;
+  color: #0a0a0a !important;
+  border: none !important;
+}
+button:hover, [class*="btn"]:hover {
+  background: #f0cf5a !important;
+}
+
+/* ---------- Active nav item ---------- */
+[class*="active"], [aria-current="page"] {
+  background: rgba(212, 175, 55, 0.15) !important;
+  color: #d4af37 !important;
+}
+
+/* ---------- Progress bars ---------- */
+[class*="progress"] > *, [class*="bar"] > * {
+  background: #d4af37 !important;
+}
+
+/* ---------- Links and icons ---------- */
+a { color: #d4af37 !important; }
+svg { stroke: #d4af37; }
+
+/* ---------- Inputs ---------- */
+input, textarea, select {
+  background: #000 !important;
+  color: #f5f1e6 !important;
+  border: 1px solid #3a3010 !important;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none !important;
+  border-color: #d4af37 !important;
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.4) !important;
+}
+
+/* ---------- Badges / priority pills ---------- */
+[class*="badge"], [class*="pill"], [class*="tag"] {
+  background: rgba(212, 175, 55, 0.15) !important;
+  color: #d4af37 !important;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #3a3010; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #d4af37; }
