@@ -1,0 +1,196 @@
+/* ==========================================================
+   Monster AI - Pure Black & Gold theme override
+   Link or paste this AFTER your main stylesheet, then Ctrl+F5.
+   ========================================================== */
+
+:root {
+  --bg: #000000;
+  --background: #000000;
+  --surface: #0b0b0b;
+  --card: #0b0b0b;
+  --sidebar: #000000;
+  --border: #5c4a12;
+  --text: #f7f1dc;
+  --muted: #b39b54;
+  --primary: #ffc72c;
+  --accent: #ffc72c;
+  --accent-hover: #ffe08a;
+  --accent-soft: rgba(255, 199, 44, 0.14);
+  --gold: #ffc72c;
+  --gold-soft: rgba(255, 199, 44, 0.14);
+}
+
+/* ---------- Base ---------- */
+html, body, main {
+  background: #000 !important;
+  color: #f7f1dc !important;
+}
+h1, h2, h3, h4 { color: #ffc72c !important; }
+
+/* ---------- Sidebar, top bar ---------- */
+aside, nav, header {
+  background: #000 !important;
+  border-color: #5c4a12 !important;
+  color: #f7f1dc !important;
+}
+aside, header { border-style: solid; border-width: 0 1px 1px 0; }
+
+/* ---------- Cards, panels, tiles ---------- */
+[class*="card"], [class*="panel"], [class*="tile"], [class*="widget"] {
+  background: #0b0b0b !important;
+  border: 1px solid #5c4a12 !important;
+  color: #f7f1dc !important;
+}
+[class*="card"]:hover, [class*="tile"]:hover {
+  border-color: #ffc72c !important;
+  box-shadow: 0 0 14px rgba(255, 199, 44, 0.25);
+}
+
+/* ---------- Muted / secondary text ---------- */
+small, [class*="muted"], [class*="subtitle"], [class*="desc"] {
+  color: #b39b54 !important;
+}
+
+/* ---------- Buttons (gold fill, black text) ---------- */
+button, [class*="btn"] {
+  background: linear-gradient(180deg, #ffd45a, #d9a514) !important;
+  color: #000 !important;
+  border: none !important;
+  font-weight: 600;
+}
+button:hover, [class*="btn"]:hover {
+  background: #ffe08a !important;
+}
+button:disabled, [class*="btn"][disabled] {
+  background: #2a2208 !important;
+  color: #7a6a30 !important;
+}
+
+/* ---------- Active nav item ---------- */
+.active, .is-active, [class~="selected"], [aria-current="page"] {
+  background: rgba(255, 199, 44, 0.16) !important;
+  color: #ffc72c !important;
+  border-left: 3px solid #ffc72c;
+}
+
+/* ---------- Progress bars ---------- */
+[class*="progress"] > * {
+  background: linear-gradient(90deg, #d9a514, #ffd45a) !important;
+}
+
+/* ---------- Links and icons ---------- */
+a { color: #ffc72c !important; }
+a:hover { color: #ffe08a !important; }
+svg[stroke]:not([stroke="none"]) { stroke: #ffc72c; }
+
+/* ---------- Inputs ---------- */
+input, textarea, select {
+  background: #000 !important;
+  color: #f7f1dc !important;
+  border: 1px solid #5c4a12 !important;
+}
+input::placeholder, textarea::placeholder { color: #7a6a30; }
+input:focus, textarea:focus, select:focus {
+  outline: none !important;
+  border-color: #ffc72c !important;
+  box-shadow: 0 0 0 2px rgba(255, 199, 44, 0.4) !important;
+}
+
+/* ---------- Badges / priority pills ---------- */
+[class*="badge"], [class*="pill"] {
+  background: rgba(255, 199, 44, 0.16) !important;
+  color: #ffc72c !important;
+  border: 1px solid #5c4a12;
+}
+
+/* ---------- Dividers & selection ---------- */
+hr { border-color: #5c4a12; }
+::selection { background: #ffc72c; color: #000; }
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #5c4a12; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #ffc72c; }
+
+/* ==========================================================
+   CHAT PAGE additions
+   ========================================================== */
+
+/* Page shell: main area, breadcrumb bar, search box */
+body, #app, #root, .app, .layout, .content, .main, [class*="workspace"], [class*="page"] {
+  background: #000 !important;
+  color: #f7f1dc !important;
+}
+[class*="breadcrumb"], [class*="breadcrumb"] * { color: #b39b54 !important; background: transparent !important; }
+[class*="search"] {
+  background: #0b0b0b !important;
+  border: 1px solid #5c4a12 !important;
+  color: #f7f1dc !important;
+}
+
+/* Chat container + message list */
+[class*="chat"], [class*="conversation"], [class*="messages"], [class*="thread"] {
+  background: #0b0b0b !important;
+  border-color: #5c4a12 !important;
+  color: #f7f1dc !important;
+}
+
+/* Assistant message bubbles (dark with gold edge) */
+[class*="message"], [class*="bubble"], [class*="msg"] {
+  background: #141414 !important;
+  border: 1px solid #5c4a12 !important;
+  color: #f7f1dc !important;
+}
+/* User bubbles (gold fill) */
+[class*="user"] [class*="bubble"], [class*="bubble"][class*="user"],
+[class*="message"][class*="user"], [class*="msg"][class*="user"], [class*="me"][class*="bubble"] {
+  background: linear-gradient(180deg, #ffd45a, #d9a514) !important;
+  color: #000 !important;
+  border: none !important;
+}
+[class*="user"] [class*="bubble"] *, [class*="message"][class*="user"] *, [class*="msg"][class*="user"] * {
+  color: #000 !important;
+}
+
+/* Avatars (the "Y" circle and the sparkle icon) */
+[class*="avatar"] {
+  background: #ffc72c !important;
+  color: #000 !important;
+}
+
+/* Composer (message box) and send button */
+[class*="composer"], [class*="input-wrap"], [class*="input-box"], [class*="chat-input"], form {
+  background: #000 !important;
+  border: 1px solid #5c4a12 !important;
+  color: #f7f1dc !important;
+}
+[class*="composer"]:focus-within, [class*="input-wrap"]:focus-within, form:focus-within {
+  border-color: #ffc72c !important;
+  box-shadow: 0 0 0 2px rgba(255, 199, 44, 0.35) !important;
+}
+[class*="send"], button[type="submit"] {
+  background: #ffc72c !important;
+  color: #000 !important;
+}
+[class*="send"] svg, button[type="submit"] svg { stroke: #000 !important; }
+
+/* Keyboard chips (⌘K), status dot text, model name, hints */
+kbd, [class*="kbd"], [class*="shortcut"], [class*="hint"] {
+  background: #141414 !important;
+  color: #b39b54 !important;
+  border: 1px solid #5c4a12 !important;
+}
+[class*="status"], [class*="model"] { color: #ffc72c !important; }
+
+/* Sidebar bottom status card and profile row */
+[class*="profile"], [class*="user-row"], [class*="account"] {
+  background: transparent !important;
+  color: #f7f1dc !important;
+}
+
+/* Task count badge (the "2") */
+[class*="count"] { background: rgba(255, 199, 44, 0.18) !important; color: #ffc72c !important; }
+
+/* Chat text colors inside everything */
+p, span, li, label, div { color: inherit; }
